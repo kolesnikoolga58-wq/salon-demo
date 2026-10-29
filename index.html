@@ -331,6 +331,18 @@
     .close__meta b { font-size: .9375rem; }
     .foot__more { display: none; }
   }
+  /* низкие окна и крупный шрифт: финал не должен вылезать за экран */
+  @media (min-width: 861px) and (max-height: 820px) {
+    .foot__more, .close__hint { display: none; }
+    .foot { padding: var(--v-3) 0; }
+    .close__inner { padding-top: var(--v-6); gap: var(--v-6); }
+    .close__inner .v-display { font-size: clamp(1.7rem, 5.4vh, 2.8rem); margin-bottom: var(--v-3); }
+    .close__inner .v-lede { font-size: clamp(1rem, 2.4vh, 1.25rem); }
+    .close__cta { margin-top: var(--v-4); }
+    .close__tel { font-size: clamp(1.2rem, 3.4vh, 1.8rem); min-height: 36px; }
+    .close__meta { gap: var(--v-2); }
+    .close__meta a { min-height: 36px; }
+  }
 </style>
 </head>
 <body>
